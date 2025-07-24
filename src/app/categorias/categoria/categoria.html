@@ -1,16 +1,16 @@
 <div class="p-6 max-w-lg mx-auto bg-white shadow-lg rounded-lg mt-6">
     <h2 class="text-2xl font-semibold text-gray-700 mb-4">Nova Categoria</h2>
     <hr/>
-    <form id="categoriaForm">
+    <form id="categoriaForm" [formGroup]="camposForm" (ngSubmit)="salvar()">
         <div class="mb-4">
             <label for="categoriaNome" class="block text-gray-700 font-medium mb-2">Nome</label>
-            <input type="text" id="nome" name="nome" class="w-full block w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400" placeholder="Ex: Restaurante, Praias, Shopping" required />
-            <span class="text-red-500 text-sm hidden" id="errorNome">Por favor, insira um nome válido.</span>
+            <input type="text" id="nome" formControlName="nome" class="w-full block w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400" placeholder="Ex: Restaurante, Praias, Shopping" required />
+            <span class="text-red-500 text-sm" id="errorNome" *ngIf="isCampoInvalido('nome')">Por favor, insira um nome válido.</span>
         </div>
         <div class="mb-4">
             <label for="categoriaDescricao" class="block text-gray-700 font-medium mb-2">Descrição</label>
-            <textarea rows="4" id="descricao" name="descricao" class="w-full block w-full p-3 border border-gray-300 rounded shadow-sm focus:outline-none  focus:ring focus:ring-blue-400" placeholder="Ex: Restaurante, Praias, Shopping" required ></textarea>
-            <span class="text-red-500 text-sm hidden" id="errorDescricao">Por favor, insira uma descrição válida.</span>
+            <textarea rows="4" id="descricao" formControlName="descricao" class="w-full block w-full p-3 border border-gray-300 rounded shadow-sm focus:outline-none  focus:ring focus:ring-blue-400" placeholder="Ex: Restaurante, Praias, Shopping" required ></textarea>
+            <span class="text-red-500 text-sm" id="errorDescricao" *ngIf="isCampoInvalido('descricao')">Por favor, insira uma descrição válida.</span>
         </div>
         <button type="submit" class=" w-full bg-blue-600 text-white font-semibold p-3 rounded shadow hover:bg-blue-700">Adicionar Categoria</button>
     </form>

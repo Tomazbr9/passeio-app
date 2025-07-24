@@ -1,0 +1,19 @@
+{
+    "categorias": [
+        {
+            "id": 1,
+            "nome": "Restaurante",
+            "descricao": "Categoria para restaurantes."
+        },
+        {
+            "id": 2,
+            "nome": "Praias",
+            "descricao": "Categoria para praias."
+        },
+        {
+            "id": 3,
+            "nome": "Shopping",
+            "descricao": "Categoria para shoppings."
+        }
+    ]
+}
