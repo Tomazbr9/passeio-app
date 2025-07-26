@@ -1,19 +1,24 @@
 {
-    "categorias": [
-        {
-            "id": 1,
-            "nome": "Restaurante",
-            "descricao": "Categoria para restaurantes."
-        },
-        {
-            "id": 2,
-            "nome": "Praias",
-            "descricao": "Categoria para praias."
-        },
-        {
-            "id": 3,
-            "nome": "Shopping",
-            "descricao": "Categoria para shoppings."
-        }
-    ]
+  "categorias": [
+    {
+      "id": "2",
+      "nome": "Praias",
+      "descricao": "Categoria para praias."
+    },
+    {
+      "id": "3",
+      "nome": "Shopping",
+      "descricao": "Categoria para shoppings."
+    },
+    {
+      "id": "4",
+      "nome": "Parque Ibirapuera",
+      "descricao": "Parque para sentir a natureza"
+    },
+    {
+      "id": "7033",
+      "nome": "Praias",
+      "descricao": "Lugares para tomar banho com a familia"
+    }
+  ]
 }
