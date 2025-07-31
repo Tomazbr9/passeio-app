@@ -1,8 +1,36 @@
 <div class="p-6 max-w-lg mx-auto bg-white shadow-lg rounded-lg mt-6">
-    <h2 class="text-2xl font-semibold text-gray-700 mb-4">Nova Categoria</h2>
+    <h2 class="text-2xl font-semibold text-gray-700 mb-4">Novo Lugar</h2>
     <hr/>
-    <form id="lugarForm">
-
+    <form id="lugarForm" [formGroup]="camposForm" (ngSubmit)="salvar()">
+        <div class="mb-4">
+            <label class="block text-gray-700 font-medium mb-2">Nome do Lugar</label>
+            <input type="text" name="nome" formControlName="nome" class="w-full block w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400" placeholder="Ex: Praia do Sol, Restaurante Estrela">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-medium mb-2">Categoria</label>
+            <select name="categoria" formControlName="categoria" class="w-full block w-full p-3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring focus:ring-blue-400">
+                <option *ngFor="let categoria of categorias" [value]="categoria.nome">{{ categoria.nome }}</option>
+            </select>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-medium mb-2">Localização</label>
+            <input type="text" name="localizacao" formControlName="localizacao" class="w-full block w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400" placeholder="Ex: Avenida Brasil, Rua das Flores">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-medium mb-2">Foto</label>
+            <input type="text" name="urlFoto" formControlName="urlFoto" class="w-full block w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400" placeholder="Ex: https://example.com/foto.jpg">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 font-medium mb-2">Avaliação</label>
+            <select name="avaliacao" formControlName="avaliacao" class="w-full block w-full p-3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring focus:ring-blue-400">
+                <option [value]="">Selecione uma avaliação</option>
+                <option [value]="1">1 - Ruim</option>
+                <option [value]="2">2 - Regular</option>
+                <option [value]="3">3 - Bom</option>
+                <option [value]="4">4 - Muito Bom</option>
+                <option [value]="5">5 - Excelente</option>
+            </select>
+        </div>
+        <button type="submit" class=" w-full bg-blue-600 text-white font-semibold p-3 rounded shadow hover:bg-blue-700">Adicionar Categoria</button>
     </form>
-    <button type="submit" class=" w-full bg-blue-600 text-white font-semibold p-3 rounded shadow hover:bg-blue-700">Adicionar Categoria</button>
 </div>

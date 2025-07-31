@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Lugar } from './lugar/lugar';
+import { Lugar } from './lugar/lugar.component';
 
 const routes: Routes = [
   {

@@ -20,5 +20,33 @@
       "nome": "Praias",
       "descricao": "Lugares para tomar banho com a familia"
     }
+  ],
+  "lugares": [
+    {
+      "id": "1",
+      "nome": "Praia de Copacabana",
+      "descricao": "Uma das praias mais famosas do mundo.",
+      "localizacao": "Rio de Janeiro, RJ",
+      "urlFoto": "https://example.com/copacabana.jpg",
+      "avaliacao": 5,
+      "categoriaId": 2
+    },
+    {
+      "id": "2",
+      "nome": "Shopping Iguatemi",
+      "descricao": "Um dos shoppings mais luxuosos da cidade.",
+      "localizacao": "São Paulo, SP",
+      "urlFoto": "https://example.com/iguatemi.jpg",
+      "avaliacao": 4,
+      "categoriaId": 3
+    },
+    {
+      "id": "813a",
+      "nome": "Bar do Zé",
+      "categoria": "Praias",
+      "localizacao": "Rio de Janeiro",
+      "urlFoto": "teste",
+      "avaliacao": "4"
+    }
   ]
 }
