@@ -5,20 +5,24 @@
         <div class="mb-4">
             <label class="block text-gray-700 font-medium mb-2">Nome do Lugar</label>
             <input type="text" name="nome" formControlName="nome" class="w-full block w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400" placeholder="Ex: Praia do Sol, Restaurante Estrela">
+            <span class="text-red-500 text-sm" id="errorDescricao" *ngIf="isCampoInvalido('nome')">Por favor, insira um nome válido.</span>
         </div>
         <div class="mb-4">
             <label class="block text-gray-700 font-medium mb-2">Categoria</label>
             <select name="categoria" formControlName="categoria" class="w-full block w-full p-3 border border-gray-300 rounded shadow-sm focus:outline-none focus:ring focus:ring-blue-400">
                 <option *ngFor="let categoria of categorias" [value]="categoria.nome">{{ categoria.nome }}</option>
             </select>
+            <span class="text-red-500 text-sm" id="errorDescricao" *ngIf="isCampoInvalido('categoria')">Por favor, selecione uma categoria válida.</span>
         </div>
         <div class="mb-4">
             <label class="block text-gray-700 font-medium mb-2">Localização</label>
             <input type="text" name="localizacao" formControlName="localizacao" class="w-full block w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400" placeholder="Ex: Avenida Brasil, Rua das Flores">
+            <span class="text-red-500 text-sm" id="errorDescricao" *ngIf="isCampoInvalido('localizacao')">Por favor, insira uma localização válida.</span>
         </div>
         <div class="mb-4">
             <label class="block text-gray-700 font-medium mb-2">Foto</label>
             <input type="text" name="urlFoto" formControlName="urlFoto" class="w-full block w-full p-3 border border-gray-300 rounded shadow-sm focus:ring focus:ring-blue-400" placeholder="Ex: https://example.com/foto.jpg">
+            <span class="text-red-500 text-sm" id="errorDescricao" *ngIf="isCampoInvalido('urlFoto')">Por favor, insira uma URL de foto válida.</span>
         </div>
         <div class="mb-4">
             <label class="block text-gray-700 font-medium mb-2">Avaliação</label>
@@ -30,6 +34,7 @@
                 <option [value]="4">4 - Muito Bom</option>
                 <option [value]="5">5 - Excelente</option>
             </select>
+            <span class="text-red-500 text-sm" id="errorDescricao" *ngIf="isCampoInvalido('avaliacao')">Por favor, selecione uma avaliação válida.</span>
         </div>
         <button type="submit" class=" w-full bg-blue-600 text-white font-semibold p-3 rounded shadow hover:bg-blue-700">Adicionar Categoria</button>
     </form>

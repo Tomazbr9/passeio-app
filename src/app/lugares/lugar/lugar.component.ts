@@ -36,15 +36,26 @@ export class Lugar implements OnInit {
   }
 
   salvar(){
-    this.lugarService.salvar(this.camposForm.value).subscribe({
-      next: (lugar) => {
-        console.log('Lugar salvo com sucesso:', lugar);
-        this.camposForm.reset();
-      },
-      error: (error) => {
-        console.error('Erro ao salvar lugar:', error);
-      }
-    });
+    this.camposForm.markAllAsTouched();
+    if(this.camposForm.valid){
+
+      this.lugarService.salvar(this.camposForm.value).subscribe({
+        next: (lugar) => {
+          console.log('Lugar salvo com sucesso:', lugar);
+          this.camposForm.reset();
+        },
+        error: (error) => {
+          console.error('Erro ao salvar lugar:', error);
+        }
+      });
+    }
+  }
+
+
+
+  isCampoInvalido(nomeCampo: string): boolean {
+    const campo = this.camposForm.get(nomeCampo);
+    return campo?.invalid && campo?.touched && campo?.errors?.['required']
   }
 
 
