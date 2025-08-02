@@ -1,7 +1,7 @@
 <header class="bg-gradient-to-r from-blue-500 to-blue-700 text-white p-6 shadow-lg">
   <div class="text-center">
-    <h1 class="text-3x1 font-bold">Titulo</h1>
-    <p class="text-lg mt-2">Subtitulo</p>
+    <h1 class="text-3x1 font-bold">{{props.titulo}}</h1>
+    <p class="text-lg mt-2">{{props.subTitulo}}</p>
   </div>
   <div class="mt-4">
     <hr class="border-t border-blue-300 opacity-50" />
@@ -9,10 +9,10 @@
 
   <nav class="mt-4">
     <ul class="flex justify-center space-x-4 text-white font-semibold">
-        <li><a href="#" class="text-yellow-300 hover:underline">Galeria</a></li>
-        <li><a href="#" class="text-yellow-300 hover:underline">Categorias</a></li>
-      <li><a href="#" class="text-yellow-300 hover:underline">Lugares</a></li>
-      <li><a href="#" class="text-yellow-300 hover:underline">Sair</a></li>
+      <li><a routerLink="/paginas/galeria" class="text-yellow-300 hover:underline">Galeria</a></li>
+      <li><a routerLink="/paginas/categorias" class="text-yellow-300 hover:underline">Categorias</a></li>
+      <li><a routerLink="/paginas/lugares" class="text-yellow-300 hover:underline">Lugares</a></li>
+      <li><a routerLink="/paginas" class="text-yellow-300 hover:underline">Sair</a></li>
     </ul>
   </nav>
 </header>
@@ -22,6 +22,5 @@
 <footer class="bg-gray-200 text-center p-4 mt-6">
   <p class="text-gray-600">Passeio App &copy; 2025</p>
   <p class="text-gray-500">Todos os direitos reservados.</p>
-  <p class="text-gray-500">Desenvolvido por Bruno
-
+  <p class="text-gray-500">Desenvolvido por Bruno</p> 
 </footer>
